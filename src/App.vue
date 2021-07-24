@@ -1,6 +1,6 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld
+  <img alt="Sean O'Grady" src="./assets/avatar.jpg" />
+  <Intro
     msg="Hello Vue 3 + TypeScript + Vite"
     msg3="Hello Vue 3 + TypeScript + Vite"
     :msg5="'Hello Vue 3 + TypeScript + Vite'"
@@ -8,20 +8,11 @@
 </template>
 
 <script lang="ts">
-import HelloWorld from '@/components/HelloWorld.vue';
+import Intro from '@/components/Intro.vue';
 
 export default {
-  components: { HelloWorld },
+  components: { Intro },
 };
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style></style>
