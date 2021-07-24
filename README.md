@@ -1,6 +1,8 @@
-# Vue 3 + Typescript + Vite
+# seanogrady.me
 
-This template should help get you started developing with Vue 3 and Typescript in Vite.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/8e89e774-23e4-4f05-9c4d-1982a5fa9371/deploy-status)](https://app.netlify.com/sites/ecstatic-ptolemy-4b19c7/deploys)
+
+My personal site
 
 ## Recommended IDE Setup
 
