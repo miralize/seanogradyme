@@ -1,5 +1,5 @@
 <template>
-  <div class="prose">
+  <div class="prose dark:text-white">
     <h1 class="text-white">Hi, I'm Sean O'Grady</h1>
 
     <p class="text-text">
@@ -13,10 +13,9 @@
     </p>
 
     <ul>
-      <li><a href="https://twitter.com/miralize">Follow me on Twitter</a>.</li>
+      <li><a href="https://twitter.com/miralize">Follow me on Twitter</a></li>
       <li>
-        <a href="https://github.com/miralize">Spot the bugs I made on Github</a
-        >/li>
+        <a href="https://github.com/miralize">Spot the bugs I made on Github</a>
       </li>
       <li>
         <a href="https://dribbble.com/miralize">
@@ -28,20 +27,10 @@
 </template>
 
 <script lang="ts">
-import { ref, defineComponent } from 'vue';
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'HelloWorld',
-  props: {
-    msg: {
-      type: String,
-      required: true,
-    },
-  },
-  setup: () => {
-    const count = ref(0);
-    return { count };
-  },
+  name: 'Intro',
 });
 </script>
 

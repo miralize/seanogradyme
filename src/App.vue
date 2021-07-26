@@ -1,18 +1,13 @@
 <template>
-  <img alt="Sean O'Grady" src="./assets/avatar.jpg" />
-  <Intro
-    msg="Hello Vue 3 + TypeScript + Vite"
-    msg3="Hello Vue 3 + TypeScript + Vite"
-    :msg5="'Hello Vue 3 + TypeScript + Vite'"
-  />
+  <div class="flex justify-end"><Settings /></div>
+  <Image />
+  <Intro />
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import Intro from '@/components/Intro.vue';
-
-export default {
-  components: { Intro },
-};
+import Settings from '@/components/Settings.vue';
+import Image from '@/components/Image.vue';
 </script>
 
 <style></style>
