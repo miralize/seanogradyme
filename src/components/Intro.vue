@@ -1,28 +1,32 @@
 <template>
-  <div class="prose dark:text-white">
-    <h1 class="text-white">Hi, I'm Sean O'Grady</h1>
+  <div class="bg-white shadow-2xl dark:bg-teal-800 container min-h-screen p-8">
+    <div class="prose dark:text-white mx-auto">
+      <h1>Hi, I'm Sean O'Grady</h1>
 
-    <p class="text-text">
-      I’m a front end developer with over a 14 years of experience in developing
-      user-friendly, fast, and robust software on the web.
-    </p>
+      <p class="text-text">
+        I’m a front end developer with over a 14 years of experience in
+        developing user-friendly, fast, and robust software on the web.
+      </p>
 
-    <p>
-      I am currently a developer for Teamwork, a fantastic software company
-      located in Cork, Ireland.
-    </p>
+      <p>
+        I am currently a developer for Teamwork, a fantastic software company
+        located in Cork, Ireland.
+      </p>
 
-    <ul>
-      <li><a href="https://twitter.com/miralize">Follow me on Twitter</a></li>
-      <li>
-        <a href="https://github.com/miralize">Spot the bugs I made on Github</a>
-      </li>
-      <li>
-        <a href="https://dribbble.com/miralize">
-          Judge my design sensibilities on Dribbble
-        </a>
-      </li>
-    </ul>
+      <ul>
+        <li><a href="https://twitter.com/miralize">Follow me on Twitter</a></li>
+        <li>
+          <a href="https://github.com/miralize"
+            >Spot the bugs I made on Github</a
+          >
+        </li>
+        <li>
+          <a href="https://dribbble.com/miralize">
+            Judge my design sensibilities on Dribbble
+          </a>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
