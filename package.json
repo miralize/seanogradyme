@@ -6,7 +6,8 @@
     "build": "vue-tsc --noEmit && vite build",
     "serve": "vite preview",
     "preview": "vite preview",
-    "tailwind": "tailwind-config-viewer -o -p 5595"
+    "tailwind": "tailwind-config-viewer -o -p 5595",
+    "prebuild": "test \"$CI\" = true && npx pnpm install -r --store=node_modules/.pnpm-store || echo skipping pnpm install"
   },
   "dependencies": {
     "@headlessui/vue": "^1.3.0",
