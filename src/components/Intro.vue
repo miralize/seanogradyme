@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-white shadow-2xl dark:bg-teal-800 container min-h-screen p-8">
+  <div class="container min-h-screen p-8">
     <div class="prose dark:text-white mx-auto">
       <h1>Hi, I'm Sean O'Grady</h1>
 
