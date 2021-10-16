@@ -8,10 +8,12 @@
     >
       <Switch
         v-model="isDark"
-        :class="isDark ? 'bg-teal-900' : 'bg-teal-700'"
         class="relative inline-flex items-center h-12 rounded-full w-20"
+        :class="isDark ? 'bg-teal-900' : 'bg-teal-700'"
       >
-        <span class="sr-only">Enable dark mode</span>
+        <span class="sr-only">
+          {{ isDark ? 'Disable dark mode' : 'Enable dark mode' }}
+        </span>
         <span
           :class="isDark ? 'translate-x-10' : 'translate-x-2'"
           class="

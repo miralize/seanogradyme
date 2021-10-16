@@ -14,15 +14,23 @@
       </p>
 
       <ul>
-        <li><a href="https://twitter.com/miralize">Follow me on Twitter</a></li>
         <li>
-          <a href="https://github.com/miralize"
-            >Spot the bugs I made on Github</a
-          >
+          <a href="https://twitter.com/miralize" target="_blank" rel="noopener">
+            Follow me on Twitter
+          </a>
         </li>
         <li>
-          <a href="https://dribbble.com/miralize">
-            Judge my design sensibilities on Dribbble
+          <a href="https://github.com/miralize" target="_blank" rel="noopener">
+            Github
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://dribbble.com/miralize"
+            target="_blank"
+            rel="noopener"
+          >
+            Critique my design sensibilities on Dribbble
           </a>
         </li>
       </ul>
