@@ -3,16 +3,15 @@
     <div
       class="
         prose
-        dark:text-white
         mx-auto
         flex flex-col
         gap-4
-        text-2xl
         max-w-2xl
-        text-green-300
+        font-normal
+        dark:text-white
       "
     >
-      <h1 class="text-6xl font-semibold dark:text-white text-black">
+      <h1 class="text-6xl font-semibold text-neutral-800 dark:text-white">
         Hi, I'm Sean O'Grady
       </h1>
 
@@ -32,13 +31,13 @@
             href="https://twitter.com/miralize"
             class="
               rounded
-              bg-teal-300
-              text-black
+              bg-pink-600
+              text-white
               px-4
               py-3
               uppercase
-              tracking-wide
-              text-sm
+              tracking-wider
+              text-xs
             "
             target="_blank"
             rel="noopener"
@@ -51,13 +50,13 @@
             href="https://github.com/miralize"
             class="
               rounded
-              bg-teal-300
-              text-black
+              bg-pink-600
+              text-white
               px-4
               py-3
               uppercase
-              tracking-wide
-              text-sm
+              tracking-wider
+              text-xs
             "
             target="_blank"
             rel="noopener"
@@ -70,13 +69,13 @@
             href="https://dribbble.com/miralize"
             class="
               rounded
-              bg-teal-300
-              text-black
+              bg-pink-600
+              text-white
               px-4
               py-3
               uppercase
-              tracking-wide
-              text-sm
+              tracking-wider
+              text-xs
             "
             target="_blank"
             rel="noopener"
