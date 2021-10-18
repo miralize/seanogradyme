@@ -5,7 +5,6 @@ module.exports = {
     'airbnb-typescript/base',
     '@vue/typescript/recommended',
     'plugin:prettier/recommended',
-    'plugin:vuejs-accessibility',
   ],
   parserOptions: {
     project: 'tsconfig.eslint.json',
