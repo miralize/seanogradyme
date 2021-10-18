@@ -4,4 +4,9 @@
 
 body {
   background: var(--bg-app-bg);
+  @apply leading-normal;
+}
+
+a {
+  color: #42b983;
 }
