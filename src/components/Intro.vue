@@ -1,7 +1,7 @@
 <template>
   <div class="container flex items-center">
-    <div class="prose dark:text-white mx-auto flex flex-col gap-4 text-2xl max-w-2xl">
-      <h1 class="text-6xl font-semibold">Hi, I'm Sean O'Grady</h1>
+    <div class="prose dark:text-white mx-auto flex flex-col gap-4 text-2xl max-w-2xl text-green-300">
+      <h1 class="text-6xl font-semibold dark:text-white text-black ">Hi, I'm Sean O'Grady</h1>
 
       <p>
         I’m a front end developer with over a 14 years of experience in
