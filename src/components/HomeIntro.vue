@@ -7,7 +7,8 @@
         flex flex-col
         gap-4
         max-w-2xl
-        font-normal
+        font-light
+        text-lg
         dark:text-white
       "
     >
@@ -92,7 +93,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'Intro',
+  name: 'HomeIntro',
 });
 </script>
 
