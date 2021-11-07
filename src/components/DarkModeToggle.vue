@@ -32,6 +32,9 @@
           <component :is="darkModeIcon" class="h-4 w-4 text-black" />
         </span>
       </Switch>
+      <button type="button" @click="resetDarkMode">
+        Use system preference
+      </button>
     </PopoverPanel>
   </Popover>
 </template>
@@ -39,10 +42,10 @@
 <script setup lang="ts">
 import { CogIcon, MoonIcon, SunIcon } from '@heroicons/vue/outline';
 import { Popover, PopoverButton, PopoverPanel, Switch } from '@headlessui/vue';
-import { useDark } from '@vueuse/core';
 import { computed } from 'vue';
+import { useDarkMode } from '@/composables/useDarkMode';
 
-const isDark = useDark({ storageKey: 'theme' });
+const { isDark, resetDarkMode } = useDarkMode();
 
 const darkModeIcon = computed(() => (isDark.value ? MoonIcon : SunIcon));
 </script>

@@ -45,7 +45,11 @@
             duration-1000
           "
         ></div>
-        <div class="clip transform-gpu max-w-sm shadow-2xl">
+        <div
+          class="clip transform-gpu max-w-sm shadow-2xl"
+          style="clip-path: url('#svgClip')"
+          :class="{ 'mix-blend-multiply': !isDark }"
+        >
           <img
             alt="Sean O'Grady"
             class="object-cover object-center"
@@ -59,10 +63,7 @@
 
 <script setup lang="ts">
 import DiamondClip from '@/assets/DiamondClip.svg?component';
-</script>
+import { useDarkMode } from '@/composables/useDarkMode';
 
-<style scoped>
-.clip {
-  clip-path: url('#svgClip');
-}
-</style>
+const { isDark } = useDarkMode();
+</script>
