@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-white dark:bg-app-bg">
+  <div class="min-h-screen bg-app-bg">
     <div class="container mx-auto py-14">
       <div class="group grid grid-cols-1 lg:grid-cols-4 lg:gap-8">
         <HomeImage />

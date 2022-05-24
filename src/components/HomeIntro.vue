@@ -1,11 +1,9 @@
 <template>
   <div class="container flex items-center">
     <div
-      class="prose mx-auto flex max-w-2xl flex-col gap-4 text-lg font-light dark:text-white"
+      class="prose mx-auto flex max-w-2xl flex-col gap-4 text-lg font-light text-white"
     >
-      <h1 class="text-6xl font-semibold text-neutral-800 dark:text-white">
-        Hi, I'm Sean O'Grady
-      </h1>
+      <h1 class="text-6xl font-semibold text-white">Hi, I'm Sean O'Grady</h1>
 
       <p>
         I’m a front end developer with over a 14 years of experience in
