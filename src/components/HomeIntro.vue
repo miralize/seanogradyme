@@ -1,16 +1,7 @@
 <template>
   <div class="container flex items-center">
     <div
-      class="
-        prose
-        mx-auto
-        flex flex-col
-        gap-4
-        max-w-2xl
-        font-light
-        text-lg
-        dark:text-white
-      "
+      class="prose mx-auto flex max-w-2xl flex-col gap-4 text-lg font-light dark:text-white"
     >
       <h1 class="text-6xl font-semibold text-neutral-800 dark:text-white">
         Hi, I'm Sean O'Grady
@@ -26,20 +17,11 @@
         company who are primarily located in Cork, Ireland.
       </p>
 
-      <ul class="flex gap-4 mt-4">
+      <ul class="mt-4 flex gap-4">
         <li>
           <a
             href="https://twitter.com/miralize"
-            class="
-              rounded
-              bg-pink-600
-              text-white
-              px-4
-              py-3
-              uppercase
-              tracking-wider
-              text-xs
-            "
+            class="rounded bg-pink-600 px-4 py-3 text-xs uppercase tracking-wider text-white"
             target="_blank"
             rel="noopener"
           >
@@ -49,16 +31,7 @@
         <li>
           <a
             href="https://github.com/miralize"
-            class="
-              rounded
-              bg-pink-600
-              text-white
-              px-4
-              py-3
-              uppercase
-              tracking-wider
-              text-xs
-            "
+            class="rounded bg-pink-600 px-4 py-3 text-xs uppercase tracking-wider text-white"
             target="_blank"
             rel="noopener"
           >
@@ -68,16 +41,7 @@
         <li>
           <a
             href="https://dribbble.com/miralize"
-            class="
-              rounded
-              bg-pink-600
-              text-white
-              px-4
-              py-3
-              uppercase
-              tracking-wider
-              text-xs
-            "
+            class="rounded bg-pink-600 px-4 py-3 text-xs uppercase tracking-wider text-white"
             target="_blank"
             rel="noopener"
           >
@@ -88,13 +52,3 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-import { defineComponent } from 'vue';
-
-export default defineComponent({
-  name: 'HomeIntro',
-});
-</script>
-
-<style scoped></style>

@@ -1,10 +1,9 @@
 <template>
   <div class="min-h-screen bg-white dark:bg-app-bg">
     <div class="container mx-auto py-14">
-      <DarkModeToggle />
-      <div class="grid grid-cols-1 group lg:grid-cols-4 lg:gap-8">
+      <div class="group grid grid-cols-1 lg:grid-cols-4 lg:gap-8">
         <HomeImage />
-        <HomeIntro class="col-span-3 z-0" />
+        <HomeIntro class="z-0 col-span-3" />
       </div>
     </div>
   </div>
@@ -12,7 +11,6 @@
 
 <script lang="ts" setup>
 import HomeIntro from '@/components/HomeIntro.vue';
-import DarkModeToggle from '@/components/DarkModeToggle.vue';
 import HomeImage from '@/components/HomeImage.vue';
 </script>
 
