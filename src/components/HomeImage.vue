@@ -1,5 +1,5 @@
 <template>
-  <DiamondClip class="sr-only" />
+  <!-- <DiamondClip class="sr-only" /> -->
   <transition appear>
     <div class="flex items-center justify-center">
       <div class="relative">
@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import DiamondClip from '@/assets/DiamondClip.svg';
+// import DiamondClip from '@/assets/DiamondClip.svg';
 import { usePreferredDark } from '@vueuse/core';
 
 const isDark = usePreferredDark();

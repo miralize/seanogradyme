@@ -1,26 +1,26 @@
 module.exports = {
   root: true,
   extends: [
-    'plugin:vue/vue3-recommended',
     'airbnb-typescript/base',
-    '@vue/typescript/recommended',
+    '@nuxtjs/eslint-config-typescript',
+    'plugin:nuxt/recommended',
     'plugin:prettier/recommended',
   ],
   parserOptions: {
     project: 'tsconfig.eslint.json',
   },
   rules: {
-    'import/extensions': [
-      'error',
-      'always',
-      {
-        js: 'never',
-        mjs: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
-      },
-    ],
+    // 'import/extensions': [
+    //   'error',
+    //   'always',
+    //   {
+    //     js: 'never',
+    //     mjs: 'never',
+    //     jsx: 'never',
+    //     ts: 'never',
+    //     tsx: 'never',
+    //   },
+    // ],
     'no-param-reassign': [
       'error',
       {
@@ -34,9 +34,8 @@ module.exports = {
     ],
   },
   settings: {
-    'import/resolver': {
-      node: {},
-      typescript: {},
-    },
+    // 'import/resolver': {
+    //   typescript: {},
+    // },
   },
 };
