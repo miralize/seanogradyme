@@ -4,7 +4,7 @@ import { handleLastFMImages } from './api/lastFm/helpers';
 
 function responseToItems(response) {
   const topArtists = [];
-  response.data.topartists.artist.forEach((_artist) => {
+  for (const _artist of response.data.topartists.artist) {
     const artist = {
       id: _artist.mbid,
       name: _artist.name,
@@ -13,7 +13,7 @@ function responseToItems(response) {
       images: handleLastFMImages(_artist.image),
     };
     topArtists.push(artist);
-  });
+  }
   return { topArtists };
 }
 

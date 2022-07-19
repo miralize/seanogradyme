@@ -5,7 +5,6 @@ import { handleLastFMImages } from './api/lastFm/helpers';
 function responseToItems(response) {
   const recentTracks = [];
   for (const _track of response.data.recenttracks.track) {
-    console.log('_track:', _track);
     const track = {
       id: _track.mbid,
       name: _track.name,

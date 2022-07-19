@@ -12515,7 +12515,7 @@ function handleLastFMImages(images) {
 // netlify/functions/topAlbums.ts
 function responseToItems(response) {
   const topAlbums = [];
-  response.data.topalbums.album.forEach((_album) => {
+  for (const _album of response.data.topalbums.album) {
     const album = {
       id: _album.mbid,
       name: _album.name,
@@ -12528,7 +12528,7 @@ function responseToItems(response) {
       images: handleLastFMImages(_album.image)
     };
     topAlbums.push(album);
-  });
+  }
   return { topAlbums };
 }
 function responseToMeta(response) {
