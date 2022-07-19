@@ -6,13 +6,14 @@
       <h1 class="text-6xl font-semibold text-white">Hi, I'm Sean O'Grady</h1>
 
       <p>
-        I’m a front end developer with over a 14 years of experience in
-        developing user-friendly, fast, and robust software on the web.
+        I’m a front end developer with over
+        {{ years }} years of experience in developing user-friendly, fast, and
+        robust software on the web.
       </p>
 
       <p>
-        I am currently working as a frontend developer for Teamwork, a software
-        company who are primarily located in Cork, Ireland.
+        I am currently working as a senior frontend developer for Teamwork, a
+        software company who are primarily located in Cork, Ireland.
       </p>
 
       <ul class="mt-4 flex gap-4">
@@ -50,3 +51,11 @@
     </div>
   </div>
 </template>
+
+<script setup>
+import { DateTime } from 'luxon';
+
+const started = DateTime.fromISO('2006-09-01');
+const y = started.diffNow('years').negate().years;
+const years = Math.floor(y);
+</script>

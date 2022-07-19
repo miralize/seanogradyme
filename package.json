@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@netlify/functions": "^1.0.0",
+    "@types/luxon": "^2.3.2",
     "@vueuse/core": "^8.9.4",
     "aws-lambda": "^1.0.7",
     "axios": "^0.27.2",

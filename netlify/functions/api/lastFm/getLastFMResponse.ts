@@ -1,51 +1,59 @@
-import axios from 'axios';
-import { HandlerEvent } from '@netlify/functions';
-
 require('dotenv').config({ path: './.env.local' });
+import axios, { AxiosRequestConfig } from 'axios';
+import { HandlerEvent, HandlerResponse } from '@netlify/functions';
 
-export const getLastFMResponse = async ({
-  method,
-  event,
-  parseResponse = (T) => T,
-}: {
-  method: string;
+const lastFMUrl = 'http://ws.audioscrobbler.com/2.0/';
+
+type LastFMRequest = {
+  params: AxiosRequestConfig['params'];
+  responseToItems: (any) => any;
+  responseToMeta: (any) => any;
   event: HandlerEvent;
-  parseResponse;
-}): Promise<{
+};
+
+type LastFMResponse = Promise<{
   statusCode: number;
   body: string;
-}> => {
-  try {
-    const lastFMUrl = 'http://ws.audioscrobbler.com/2.0/';
+}>;
 
-    const lastFMApiKey = process.env.LASTFM_API_KEY;
-    if (!lastFMApiKey) {
+export async function getLastFMResponse({
+  params,
+  event,
+  responseToItems,
+  responseToMeta,
+}: LastFMRequest): Promise<HandlerResponse> {
+  try {
+    const { LASTFM_API_KEY, LASTFM_USER } = process.env;
+    if (!LASTFM_API_KEY) {
       throw new Error('There was an error building the request');
     }
 
-    const params = {
-      ...event.queryStringParameters,
-      user: 'miralize',
-      api_key: lastFMApiKey,
-      format: 'json',
-      method,
-    };
+    const response = await axios.get(lastFMUrl, {
+      params: {
+        ...event.queryStringParameters,
+        ...params,
+        user: LASTFM_USER,
+        api_key: LASTFM_API_KEY,
+        format: 'json',
+      },
+    });
 
-    if (process.env.NODE_ENV === 'development') {
-      console.log('params:', params);
-    }
-
-    const response = await axios.get(lastFMUrl, { params });
-    const transformedResponse = parseResponse(response);
+    const items = responseToItems(response);
+    const meta = responseToMeta(response);
 
     return {
+      headers: {
+        'Content-Type': 'application/json',
+      },
       statusCode: response.status,
-      body: JSON.stringify(transformedResponse.data),
+      body: JSON.stringify({ ...items, meta }),
     };
-  } catch (err) {
+  } catch (error) {
+    const errorMessage = error?.response?.data ?? error.toString() ?? {};
+    const statusCode = error?.response?.status ?? 500;
     return {
-      statusCode: err?.response?.status ?? 500,
-      body: JSON.stringify(err?.response?.data ?? {}),
+      statusCode,
+      body: JSON.stringify(errorMessage),
     };
   }
-};
+}
